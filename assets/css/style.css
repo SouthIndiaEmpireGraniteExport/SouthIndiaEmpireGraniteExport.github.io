@@ -21,6 +21,10 @@ a {
   color: #ae9556;
   text-decoration: none;
 }
+.col-lg-6{
+  text-align:   justify ;
+}
+
 
 a:hover {
   color: #fc8129;
@@ -995,10 +999,11 @@ section {
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
+  text-align: center;
+  /*
   padding: 30px 30px 0 30px;
   margin: 30px 15px;
-  text-align: center;
-  min-height: 350px;
+  min-height: 350px;*/
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
 }
 
