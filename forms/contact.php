@@ -35,11 +35,14 @@ if(isset($_POST['send']))
             }
             else
             {
+
         	 echo '<script language="javascript">';
+               echo '<script language="javascript">';
+
     	        echo 'alert("Thank You Contacting Us We Will Response You As Early Possible")';
     	        echo '</script>';
          
             } 
         	
 }        	    
-        
+
