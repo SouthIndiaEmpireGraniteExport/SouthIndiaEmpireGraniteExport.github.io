@@ -28,6 +28,14 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript">var submitted=false;</script>
+  <script type="text/javascript">
+    function subform(){  
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('Thanks for Contacting Us, Our Team will get back to you soon...');
+      };
+  </script>
 </head>
 
 <body>
@@ -681,31 +689,25 @@
             </div>
 
           </div>
-
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
-            <!--<form action="mailto:inquiry@siege.co.in" name="contactForm" id="contactForm" method="post" class="php-email-form" enctype="text/plain">-->
-              <form method="post" class="php-email-form" action="forms/contact.php">
+              <form name="gform" id="gform" method="POST" class="php-email-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfkWHx9HAB01ZpM3CzQfw7Ygw6_LYEFD5RxRnlFyRkdHSi1Cg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="entry.485428648" class="form-control" id="entry.485428648" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="entry.879531967" id="entry.879531967" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="entry.760684166" id="entry.760684166" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="entry.1696159737" id="entry.1696159737" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button onclick="subform()" type="submit">Send Message</button></div>
             </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
           </div>
         </div>  
       </div>
@@ -740,7 +742,6 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
